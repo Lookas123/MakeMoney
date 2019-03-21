@@ -269,7 +269,6 @@ function show(x) {
     document.getElementById(x).style.visibility = "visible";
 }
 
-update()
 setInterval(update, 50)
 setInterval(gainmoney, 1000)
 
