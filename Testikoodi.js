@@ -17,6 +17,17 @@ var cashformula = 1;
 var cup6cost = 1;
 var moneymult = 1;
 
+hide("cup1")
+hide("cup2")
+hide("cup3")
+hide("cup4")
+hide("cup5")
+hide("cup6")
+hide("buy")
+hide("prestige")
+hide("upgrade")
+hide("mupgrade")
+
 function double(){
     x += clickstrength * (cash +1) * moneymult;
     money = document.getElementById("money");
