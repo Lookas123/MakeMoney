@@ -17,17 +17,6 @@ var cashformula = 1;
 var cup6cost = 1;
 var moneymult = 1;
 
-hide("cup1")
-hide("cup2")
-hide("cup3")
-hide("cup4")
-hide("cup5")
-hide("cup6")
-hide("buy")
-hide("prestige")
-hide("upgrade")
-hide("mupgrade")
-
 function double(){
     x += clickstrength * (cash +1) * moneymult;
     money = document.getElementById("money");
@@ -36,12 +25,9 @@ function double(){
 
 function update(){
     document.getElementById("money").innerHTML = "Money: " + format(x); 
-    availablecash = Math.round(Math.log2(x/1000)/2)-totalcash
+    availablecash = Math.round(Math.log2(x/1000)/2)-totalcash;
     if (moneymakers>0 || totalcash>0) {
     document.getElementById("moneymakers").innerHTML = "You have " + moneymakers + " moneymakers, making " + format(moneymakers*mult*(cash+1)*moneymult) + " money per second" 
-    }
-    if (cashformula = 2) {
-        availablecash += totalcash;
     }
     if (availablecash<0) {
         availablecash=0
@@ -281,3 +267,13 @@ function show(x) {
 
 setInterval(update, 50)
 setInterval(gainmoney, 1000)
+
+
+
+
+
+
+
+
+
+
