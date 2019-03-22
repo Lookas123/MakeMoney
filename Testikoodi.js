@@ -25,7 +25,7 @@ function double(){
 
 function update(){
     document.getElementById("money").innerHTML = "Money: " + format(x); 
-    availablecash = Math.round(Math.log2(x/1000)/2)-totalcash;
+    availablecash = Math.round(Math.log2(x/1000))-totalcash;
     if (cashformula==2) {
 	availablecash += totalcash;    
     }
@@ -254,7 +254,7 @@ function buy5() {
 function buy6() {
     if (cash>=cup6cost){
         cash -= cup6cost;
-	moneymult *= 2;
+	moneymult *= 5;
 	cup6cost *= 10;   
         document.getElementById("cup6").innerHTML =  "Quintuple the amount of money you earn for " + cup6cost + " cash"     
     }
