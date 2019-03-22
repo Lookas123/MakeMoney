@@ -17,12 +17,16 @@ var cashformula = 1;
 var cup6cost = 1;
 var moneymult = 1;
 
+
+// click
 function double(){
     x += clickstrength * (cash +1) * moneymult;
     money = document.getElementById("money");
     money.innerHTML = "Money: " + format(x);
 }
 
+
+//update visuals
 function update(){
     document.getElementById("money").innerHTML = "Money: " + format(x); 
     availablecash = Math.round(Math.log2(x/1000))-totalcash;
@@ -154,7 +158,7 @@ function upgrade(){
     }
 }
 
-
+//upgrade moneymakers
 function mupgrade(){
     if (x >= mupgradecost) {
      x -= mupgradecost
@@ -168,6 +172,7 @@ function mupgrade(){
     }
 }
 
+//buy moneymakers
 function buy(){
     if (x >= cost) {
        x -= cost 
@@ -178,6 +183,7 @@ function buy(){
     }
 }
 
+//sell stuff cash
 function prestige() {
      x = 1;
      moneymakers = 0
@@ -196,6 +202,8 @@ function prestige() {
      hide("prestige")
 }
 
+
+//convert a number to scientific
 function format(a) {
     if (a>1000) {
         return Math.round(a/Math.pow(10, Math.floor(Math.log10(a)))*100)/100+"e"+Math.floor(Math.log10(a))
@@ -205,6 +213,8 @@ function format(a) {
 
 }
 
+//prestige upgrades
+//1
 function buy1() {
     if (cash>=5 && !cups.includes(1)){
         cash -= 5;
@@ -214,6 +224,7 @@ function buy1() {
     }
 }
 
+//2
 function buy2() {
     if (cash>=10 && !cups.includes(2)){
         cash -= 10;
@@ -223,6 +234,7 @@ function buy2() {
     }
 }
 
+//3
 function buy3() {
     if (cash>=10 && !cups.includes(3)){
         cash -= 10;
@@ -232,6 +244,7 @@ function buy3() {
     }
 }
 
+//4
 function buy4() {
     if (cash>=1 && !cups.includes(4)){
         cash -= 1;
@@ -241,6 +254,7 @@ function buy4() {
     }
 }
 
+//5
 function buy5() {
     if (cash>=30 && !cups.includes(5)&&cups.includes(1)&&cups.includes(2)&&cups.includes(3)&&cups.includes(4)){
         cash -= 30;
@@ -251,6 +265,7 @@ function buy5() {
     }
 }
 
+//6
 function buy6() {
     if (cash>=cup6cost){
         cash -= cup6cost;
