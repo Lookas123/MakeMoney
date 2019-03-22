@@ -26,6 +26,9 @@ function double(){
 function update(){
     document.getElementById("money").innerHTML = "Money: " + format(x); 
     availablecash = Math.round(Math.log2(x/1000)/2)-totalcash;
+    if (cashformula==2) {
+	availablecash += totalcash;    
+    }
     if (moneymakers>0 || totalcash>0) {
     document.getElementById("moneymakers").innerHTML = "You have " + moneymakers + " moneymakers, making " + format(moneymakers*mult*(cash+1)*moneymult) + " money per second" 
     }
