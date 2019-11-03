@@ -29,7 +29,7 @@ function double(){
 //update visuals
 function update(){
     document.getElementById("money").innerHTML = "Money: " + format(x); 
-    availablecash = Math.round(Math.log2(x/1000))-totalcash;
+    availablecash = Math.round(Math.log2(x/1000000) * 2)-totalcash;
     if (cashformula==2) {
 	availablecash += totalcash;    
     }
