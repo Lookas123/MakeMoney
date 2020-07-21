@@ -20,7 +20,7 @@ const cupprices = [5,10,10,1]
 
 // click
 function double(auto = false){
-    if(!auto || cups.includes(5)) {
+    if(!auto || cups.includes(4)) {
         x += (2*(cups.includes(2)?1.25:1)) ** clickupgrades * (cash +1) * moneymult;
         document.getElementById("money").innerHTML = "Money: " + format(x);
     }
